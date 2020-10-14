@@ -1,56 +1,14 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle} from 'reactstrap';
-import { Loading } from './LoadingComponent';
-import { baseUrl } from '../shared/baseUrl';
-import { FadeTransform } from 'react-animation-components';
-
-    function RenderCard({item, isLoading, errMess}) {
-    
-        if (isLoading) {
-            return(
-                    <Loading />
-            );
-        }
-        else if (errMess) {
-            return(
-                    <h4>{errMess}</h4>
-            );
-        }
-        else 
-            return(
-                <FadeTransform
-                in
-                transformProps={{
-                    exitTransform: 'scale(0.5) translateY(-50%)'
-                }}>
-                <Card>
-                    <CardImg src={baseUrl + item.image} alt={item.name} />
-                    <CardBody>
-                    <CardTitle>{item.name}</CardTitle>
-                    {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null }
-                    <CardText>{item.description}</CardText>
-                    </CardBody>
-                </Card>
-            </FadeTransform>
-            );
-    
-    }
 
 function Home(props) {
     return(
         <div className="container">
-            <div className="row align-items-start">
-                <div className="col-12 col-md m-1">
-                   <RenderCard item={props.dish} isLoading={props.dishesLoading} errMess={props.dishesErrMess}  />
-                </div>
-                <div className="col-12 col-md m-1">
-                   <RenderCard item={props.promotion} isLoading={props.promoLoading} errMess={props.promoErrMess} />  
-                </div>
-                <div className="col-12 col-md m-1">
-                    <RenderCard item={props.leader} />
-                </div>
+        <div className="row row-header">
+            <div className="col-12 col-sm-6">
+                <h2>Joint Seat Allocation Authority 2020</h2>
+                <p>The Joint Seat Allocation Authority (JoSAA) 2020 has been set up by the Ministry of Education [erstwhile Ministry of Human Resources Development (MHRD)] to manage and regulate the joint seat allocation for admissions to 110 institutes for the academic year 2020-21. This includes 23 IITs,  31 NITs, IIEST Shibpur, 26 IIITs and 29 Other-Government Funded Technical Institutes (Other-GFTIs). Admission to all the academic programs offered by these Institutes will be made through a single platform.</p>
             </div>
+        </div>
         </div>
     );
 }

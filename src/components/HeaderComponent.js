@@ -52,7 +52,7 @@ class Header extends Component {
                     <ModalBody>
                     <Form onSubmit={this.handleLogin}>
                             <FormGroup>
-                                <Label htmlFor="username">Username</Label>
+                                <Label htmlFor="username">Roll Number</Label>
                                 <Input type="text" id="username" name="username"
                                     innerRef={(input) => this.username = input} />
                             </FormGroup>
@@ -72,6 +72,13 @@ class Header extends Component {
                     </Form>
                     </ModalBody>
                 </Modal>
+                
+                    <div style={{display: 'flex', justifyContent:'center', alignItems:'center', height: '5vh', backgroundColor:'#999999'}}>
+                        <div className="row row-header">
+                                <h5>Joint Seat Allocation Authority 2020</h5>
+                        </div>
+                    </div>
+
                 <Navbar dark expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav} />
@@ -82,13 +89,13 @@ class Header extends Component {
                                 <NavLink className="nav-link"  to='/home'><span className="fa fa-home fa-lg"></span> Home</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> About Us</NavLink>
+                                <NavLink className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> Seat Matrix</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Menu</NavLink>
+                                <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Counselling Schedule</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Contact Us</NavLink>
+                                <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Register</NavLink>
                             </NavItem>
                             </Nav>
                             <Nav className="ml-auto" navbar>
@@ -99,16 +106,7 @@ class Header extends Component {
                         </Collapse>
                     </div>
                 </Navbar>
-                <Jumbotron>
-                    <div className="container">
-                        <div className="row row-header">
-                            <div className="col-12 col-sm-6">
-                                <h1>Ristorante con Fusion</h1>
-                                <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-                            </div>
-                        </div>
-                    </div>
-                </Jumbotron>
+
             </div>
         );
     }
