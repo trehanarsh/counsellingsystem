@@ -92,15 +92,15 @@ class Header extends Component {
                                 <NavLink className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> Seat Matrix</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Counselling Schedule</NavLink>
+                                <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span>Notice Board</NavLink>
                             </NavItem>
-                            <NavItem>
+                            {/* <NavItem>
                                 <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Register</NavLink>
-                            </NavItem>
+                            </NavItem> */}
                             </Nav>
                             <Nav className="ml-auto" navbar>
                                 <NavItem>
-                                    <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
+                                    {/* <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button> */}
                                 </NavItem>
                             </Nav>
                         </Collapse>
