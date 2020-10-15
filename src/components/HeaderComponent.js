@@ -4,6 +4,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
     Form, FormGroup, Input, Label } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
+
 class Header extends Component {
     constructor(props) {
         super(props);
@@ -73,11 +74,12 @@ class Header extends Component {
                     </ModalBody>
                 </Modal>
                 
-                    <div style={{display: 'flex', justifyContent:'center', alignItems:'center', height: '5vh', backgroundColor:'#999999'}}>
-                        <div className="row row-header">
-                                <h5>Joint Seat Allocation Authority 2020</h5>
+                        <div className="row row-header" style={{display: 'flex', flexDirection:'column', justifyContent:'center', alignItems:'center', height: '15vh', backgroundColor:'#BBBBBB'}}>
+                                <img src='assets/images/josaa.png' height="80" width="80" alt='jossa' />
+                                <h3>Joint Seat Allocation Authority 2020</h3>
+                                <h5>IITs, NITs, IIEST, IIITs and Other-GFTIs for the Academic Year 2020-21</h5>
+                                <img src='assets/images/index.png' height="80" width="80" alt='jossa' />
                         </div>
-                    </div>
 
                 <Navbar dark expand="md">
                     <div className="container">
@@ -92,7 +94,7 @@ class Header extends Component {
                                 <NavLink className="nav-link" to='/aboutus'><span className="fa fa-info fa-lg"></span> Seat Matrix</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span>Notice Board</NavLink>
+                                <NavLink className="nav-link"  to='/menu'><span className="fa fa-list fa-lg"></span> Notice Board</NavLink>
                             </NavItem>
                             {/* <NavItem>
                                 <NavLink className="nav-link" to='/contactus'><span className="fa fa-address-card fa-lg"></span> Register</NavLink>

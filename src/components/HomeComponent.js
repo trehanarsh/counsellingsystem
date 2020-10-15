@@ -43,7 +43,7 @@ class Home extends Component {
 
  render() {
     return(
-        <div className="container">
+        <div className="container" style={{display: 'grid',alignItems:'centre',gridTemplateColumns:'auto 1fr auto'}}>
                 <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
                     <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
                     <ModalBody>
@@ -77,10 +77,10 @@ class Home extends Component {
                 <p>The Joint Seat Allocation Authority (JoSAA) 2020 has been set up by the Ministry of Education [erstwhile Ministry of Human Resources Development (MHRD)] to manage and regulate the joint seat allocation for admissions to 110 institutes for the academic year 2020-21. This includes 23 IITs,  31 NITs, IIEST Shibpur, 26 IIITs and 29 Other-Government Funded Technical Institutes (Other-GFTIs). Admission to all the academic programs offered by these Institutes will be made through a single platform.</p>
             </div>
             <div className="col-3"></div>
-            <div className="col-1 m-1">
+            <div className="col-12 m-3 col-lg-1">
                     <Button outline onClick={this.toggleModal}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
             </div> 
-            <div className="col-1 m-1">       
+            <div className="col-12 m-3 col-lg-1">       
                     <Link to='/contactus'>
                       <Button outline><span className="fa fa-address-card fa-lg"></span> Register</Button>
                     </Link>
